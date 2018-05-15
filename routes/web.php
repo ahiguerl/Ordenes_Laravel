@@ -14,5 +14,3 @@
 Route::get('/', function () {
     return view('layouts/welcome');
 });
-
-Route::get('/ordenservicio', 'OrdenesServicioController@servicio');
