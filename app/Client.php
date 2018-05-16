@@ -14,7 +14,7 @@ class Client extends Model
       'cellphone',
       'phone',
       'contact_name',
-      'extension_number',
+      'extension_number'
     ];
     protected $guarded = ['id'];
 

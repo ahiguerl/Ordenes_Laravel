@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class RepairProcess extends Model
 {
     protected $table = 'repair_processes';
-    protected $fillable =['name']
+    protected $fillable =['name'];
     protected $guarded = ['id'];
 
     // Relationships many to many

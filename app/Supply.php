@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Supply extends Model
 {
     protected $table = 'supplies';
-    protected $fillable = ['detail', 'unit_of_measurement']
+    protected $fillable = ['detail', 'unit_of_measurement'];
     protected $guarded = ['id'];
 
     // Relationship
