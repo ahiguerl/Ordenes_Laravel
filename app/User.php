@@ -23,7 +23,7 @@ class User extends Authenticatable
       'phone',
       'date_to_entry',
       'url_avatar',
-      'profile_id',
+      'profile_id'
       ];
 
     /**
@@ -35,8 +35,14 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    // Relationships
     public function serviceOrder(){
       return $this->hasMany('\App\ServiceOrder');
     }
+
+    public function profile(){
+      return $this->belongsTo('\App\Profile');
+    }
+    //End Relationships
 
 }

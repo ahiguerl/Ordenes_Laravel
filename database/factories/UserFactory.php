@@ -35,3 +35,10 @@ $factory->define(App\Product::class, function (Faker $faker){
       'tax' => 0.19,
     ];
 });
+
+
+$factory->define(App\RepairProcess::class, function(){
+
+  'name'
+
+})

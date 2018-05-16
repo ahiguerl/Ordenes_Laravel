@@ -8,7 +8,7 @@ class ServiceOrder extends Model
 {
   protected $table = 'service_orders';
   protected $fillable = ['client_id'];
-  protected $guarded = ['id', 'employee_id', 'date', 'is_open'];
+  protected $guarded = ['id', 'user_id', 'date', 'is_open'];
 
   // Relationships
   public function workOrder(){

@@ -16,12 +16,6 @@ class CreateServiceOrdersTable extends Migration
         Schema::create('service_orders', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-
-            $table->string('client_id'); // Will contain clients id
-            $table->foreign('client_id')->references('id')->on('clients');
-            $table->integer('user_id')->unsigned(); // Will contain employees id
-            $table->foreign('user_id')->references('id')->on('users');
-
             $table->dateTime('date');
             $table->boolean('is_open');
         });

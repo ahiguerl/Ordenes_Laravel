@@ -21,7 +21,6 @@ class AddUsernameProfileAndOthersToUsersTable extends Migration
             $table->string('phone', 10);
             $table->dateTime('date_to_entry');
             $table->string('url_avatar')->nulleable();
-            $table->integer('profile_id')->nulleable();
         });
     }
 
@@ -34,7 +33,7 @@ class AddUsernameProfileAndOthersToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['last_name', 'address', 'phone', 'date_to_entry', 'url_avatar', 'profile_id']);
+            $table->dropColumn(['last_name', 'address', 'phone', 'date_to_entry', 'url_avatar']);
             $table->increments('id')->change();
             $table->string('name')->change();
         });
