@@ -53,9 +53,10 @@ $factory->define(App\RepairProcess::class, function(Faker $faker){
 
 $factory->define(App\Client::class, function (Faker $faker) {
     return [
+      'id' => rand(800000000, 999999999) . '-' . rand(0, 9),
       'name' => $faker->company,
       'address' => $faker->address,
-      'city' => $faker->city,
+      'city' => rand(0, 1000),
       'cellphone' => '3' . rand(100000000, 999999999),
       'phone' => rand(1000000, 9999999),
       'contact_name' => $faker->name,
